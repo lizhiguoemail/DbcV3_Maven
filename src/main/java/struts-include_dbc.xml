@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+    <!-- 通配符只能匹配到当前项目下的那些文件，jar包里的配置文件是无法匹配到的，只能使用全路径匹配！ -->
+<struts>    
+   	<include file="com/dbc/struts/struts-dbc_apilogin.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_app.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_article.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_chongzhi.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_comment.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_createcode.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_friendlink.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_fun.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_log.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_msg.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_nav.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_permit.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_role.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_treebycai.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_type.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_typegroup.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_userinfo.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_webconfig.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_province.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_city.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_district.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_street.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_community.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_ad.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_slides.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_util.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_backstage.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_token.xml"></include>
+</struts>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DbcV3_Maven"
+  id="myeclipse.1465796967078"
+  context-root="/Maven2"
+  j2ee-spec="6.0"
+  archive="DbcV3_Maven.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

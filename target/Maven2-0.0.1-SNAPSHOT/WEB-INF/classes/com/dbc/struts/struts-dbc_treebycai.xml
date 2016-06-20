@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+	
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dbc_treebycai" extends="backstage">
+	 	 <action name="dbc_treebycai" class="com.dbc.action.Dbc_treeByCaiAction" method="execute">
+	            <result name="addsonnode">/pages/backstage/systool/treebycai/Addsonnode.jsp</result>
+	            <result name="updatenode">/pages/backstage/systool/treebycai/UpdateNode.jsp</result>
+	            <result name="treelist">/pages/backstage/systool/treebycai/ListTree.jsp</result>
+	       </action>
+	</package>
+</struts>
+

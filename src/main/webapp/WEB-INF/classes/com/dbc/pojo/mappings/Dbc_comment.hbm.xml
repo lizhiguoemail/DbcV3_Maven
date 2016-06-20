@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbc.pojo.Dbc_comment" table="dbc_comment">
+        <id name="id" column="ID" type="java.lang.String">
+            <generator class="uuid.hex"></generator>
+        </id>
+        <property name="objid" column="OBJID" type="string" lazy="true"/>
+        <property name="uid" column="UID" type="string" lazy="true"/>
+        <property name="objname" column="OBJNAME" type="string" lazy="true"/>
+        <property name="source_userid" column="SOURCE_USERID" type="string" lazy="true"/>
+        <property name="isreg" column="ISREG" type="string" lazy="true"/>
+        <property name="floor" column="FLOOR" type="integer" lazy="true"/>
+        <property name="type" column="TYPE" type="string" lazy="true"/>
+        <property name="email" column="EMAIL" type="string" lazy="true"/>
+        <property name="gerenzhuye" column="GERENZHUYE" type="string" lazy="true"/>
+        <property name="neirong" column="NEIRONG" type="string" lazy="true"/>
+        <property name="uname" column="UNAME" type="string" lazy="true"/>
+        <property name="ip" column="IP" type="string" lazy="true"/>
+        <property name="ipzone" column="IPZONE" type="string" lazy="true"/>
+        <property name="ipaddress" column="IPADDRESS" type="string" lazy="true"/>
+        <property name="isguolv" column="ISGUOLV" type="string" lazy="true"/>
+        <property name="iszuijia" column="ISZUIJIA" type="string" lazy="true"/>
+        <property name="description" column="DESCRIPTION" type="string" lazy="true"/>
+        <property name="sortcode" column="SORTCODE" type="double" lazy="true"/>
+        <property name="createdate" column="CREATEDATE" type="string" lazy="true"/>
+        <property name="createuser" column="CREATEUSER" type="string" lazy="true"/>
+        <property name="updatedate" column="UPDATEDATE" type="string" lazy="true"/>
+        <property name="updateuser" column="UPDATEUSER" type="string" lazy="true"/>
+        <property name="deletemark" column="DELETEMARK" type="string" lazy="true" not-null="true"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- struts封装了request,导致ueditor上传不了图片 让struts过滤掉这个jsp页面的部分信息 -->
+	<constant name="struts.action.excludePattern" value="/ueditor/.*" />
+	<!-- 修改上传的最大文件大小：100MB -->  
+    <constant name="struts.multipart.maxSize" value="104857600"/>  
+	
+	<package name="backstage" extends="struts-default">
+		 <!-- 定义一个拦截器 -->  
+        <interceptors>  
+            <interceptor name="logininterceptor"  class="com.dbc.interceptot.LoginInterceptor"></interceptor>
+            <interceptor name="permitterceptor"  class="com.dbc.interceptot.PermitInterceptor"></interceptor>   
+            <!-- 拦截器栈 
+             interceptor-stack是一堆拦截器组成的一个拦截器栈。也可以当拦截器使用。
+			interceptor-ref是指定某个action使用哪一个拦截器，可以是一个interceptor,也可以是一个interceptor-stack。
+			-->  
+            <interceptor-stack name="mydefault">  
+            <!-- 使用自定义的拦截器配置在struts配置文件的action中，还要引入defaultStack，
+                                           否则使用了modelDriven的formBean将不能获取到form表单中字段的值 -->
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="logininterceptor" />
+                <interceptor-ref name="permitterceptor" />    
+            </interceptor-stack>  
+            <!-- 调用这个拦截器栈方式是 在<action></action>中间加上<interceptor-ref name="mydefault" /> 它的好处是一个action可以调用多个拦截器--> 
+            
+        </interceptors>
+	        
+        <!-- 定义全局Result -->  
+        <global-results>  
+            <!-- 当返回login视图名时，转入/login.jsp页面 -->  
+             <result name="login">/pages/backstage/login.jsp</result>
+             <result name="add_success">/common/pub_add_success.jsp</result>
+			<result name="del_success">/common/pub_del_success.jsp</result>
+			<result name="modify_success">/common/pub_update_success.jsp</result>
+			<!-- <result name="Exception">/pages/common/exception.jsp</result> -->  
+			<result name="nopermit">/pages/common/nopermit.jsp</result>
+			<result name="nosession">/pages/common/nosession.jsp</result>
+        </global-results>  
+        <!-- 
+		<global-exception-mappings>
+			<exception-mapping result="Exception" exception="java.lang.RuntimeException"></exception-mapping>
+		</global-exception-mappings>
+		 -->
+    </package>
+   
+    <!-- 通配符只能匹配到当前项目下的那些文件，jar包里的配置文件是无法匹配到的，只能使用全路径匹配！ 
+   	<include file="com/dbc/struts/struts-dbc_apilogin.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_app.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_article.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_chongzhi.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_comment.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_createcode.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_friendlink.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_fun.xml"></include> 
+   	<include file="com/dbc/struts/struts-dbc_log.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_msg.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_nav.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_permit.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_role.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_treebycai.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_type.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_typegroup.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_userinfo.xml"></include>
+   	<include file="com/dbc/struts/struts-dbc_webconfig.xml"></include>
+   	-->
+   	<include file="struts-include_dbc.xml"></include>
+</struts>
+

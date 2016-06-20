@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+	
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dbc_webconfig" extends="backstage">
+	 	<action name="dbc_webconfig" class="com.dbc.action.Dbc_webconfigAction" method="execute">
+            <result name="show">/pages/backstage/web/webconfig.jsp</result>
+            <result name="show_1">/pages/backstage_1/web/webconfig.jsp</result>
+        </action>
+	</package>
+</struts>
+

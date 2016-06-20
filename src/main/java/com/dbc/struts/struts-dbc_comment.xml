@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+	
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dbc_comment" extends="backstage">
+	 	 <action name="dbc_comment" class="com.dbc.action.Dbc_commentAction" method="execute">
+	            <result name="list">/pages/backstage/comment/Listbase_comment.jsp</result>
+		         <result name="addorupdate">/pages/backstage/comment/Addorupdatebase_comment.jsp</result>
+		         <result name="listpinglun">/pages/common/comment.jsp</result>
+		         <result name="redirect-list" type="redirectAction">
+		           <param name="actionName">dbc_comment</param>
+		           <param name="methode">list</param>
+		           <param name="objid">${objid}</param>
+		           <param name="type">${type}</param>
+		           <param name="uid">${uid}</param>
+		         </result>
+		         <result name="redirect-listpinglun" type="redirectAction">
+		           <param name="actionName">dbc_comment</param>
+		           <param name="methode">listpinglun</param>
+		           <param name="objid">${objid}</param>
+		           <param name="type">${type}</param>
+		           <param name="uid">${uid}</param>
+		         </result>
+	       </action>
+	</package>
+</struts>
+

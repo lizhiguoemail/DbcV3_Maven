@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="DbcV3_Maven">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <property name="context-root" value="/Maven2"/>
+        <property name="java-output-path" value="/DbcV3_Maven/src/main/webapp/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

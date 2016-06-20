@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbc.pojo.Dbc_ad" table="dbc_ad">
+    	<!-- id自增长 -->
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="identity"></generator> 
+        </id>
+        <property name="tag" column="TAG" type="string" lazy="true"/>
+        <property name="adtype" column="ADTYPE" type="string" lazy="true"/>
+        <property name="title" column="TITLE" type="string" lazy="true"/>
+        <property name="moshi" column="MOSHI" type="string" lazy="true"/>
+        <property name="diaoyongfangshi" column="DIAOYONGFANGSHI" type="string" lazy="true"/>
+        <property name="img" column="IMG" type="string" lazy="true"/>
+        <property name="height" column="HEIGHT" type="string" lazy="true"/>
+        <property name="width" column="WIDTH" type="string" lazy="true"/>
+        <property name="bgcolor" column="BGCOLOR" type="string" lazy="true"/>
+        <property name="link" column="LINK" type="string" lazy="true"/>
+        <property name="content" column="CONTENT" type="string" lazy="true"/>
+        <property name="edate" column="EDATE" type="string" lazy="true"/>
+        <property name="description" column="DESCRIPTION" type="string" lazy="true"/>
+        <property name="sortcode" column="SORTCODE" type="double" lazy="true"/>
+        <property name="createdate" column="CREATEDATE" type="string" lazy="true"/>
+        <property name="createuser" column="CREATEUSER" type="string" lazy="true"/>
+        <property name="updatedate" column="UPDATEDATE" type="string" lazy="true"/>
+        <property name="updateuser" column="UPDATEUSER" type="string" lazy="true"/>
+        <property name="deletemark" column="DELETEMARK" type="string" lazy="true" not-null="true" />
+    </class>
+</hibernate-mapping>

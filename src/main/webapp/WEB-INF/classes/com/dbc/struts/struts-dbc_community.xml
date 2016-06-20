@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+        "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+
+
+<struts>
+  <package name="dbc_community" extends="backstage">
+     <action  name="dbc_community" class="com.dbc.action.Dbc_communityAction" method="execute">
+         <result name="list">/pages/backstage/diqu/Listdbc_community.jsp</result>
+         <result name="addorupdate">/pages/backstage/diqu/Addorupdatedbc_community.jsp</result>
+         <result name="redirect-list" type="redirectAction">
+           <param name="actionName">dbc_community</param>
+           <param name="methode">list</param>
+         </result>
+      </action>
+  </package>
+</struts>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+        "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+
+
+<struts>
+  <package name="dbc_slides" extends="backstage">
+     <action  name="dbc_slides" class="com.dbc.action.Dbc_slidesAction" method="execute">
+         <result name="list">/pages/backstage/web/slides/Listdbc_slides.jsp</result>
+         <result name="addorupdate">/pages/backstage/web/slides/Addorupdatedbc_slides.jsp</result>
+         <result name="redirect-list" type="redirectAction">
+           <param name="actionName">dbc_slides</param>
+           <param name="methode">list</param>
+         </result>
+      </action>
+  </package>
+</struts>

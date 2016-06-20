@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+        "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+
+
+<struts>
+  <package name="dbc_ad" extends="backstage">
+     <action  name="dbc_ad" class="com.dbc.action.Dbc_adAction" method="execute">
+         <result name="list">/pages/backstage/web/ad/Listdbc_ad.jsp</result>
+         <result name="addorupdate">/pages/backstage/web/ad/Addorupdatedbc_ad.jsp</result>
+         <result name="redirect-list" type="redirectAction">
+           <param name="actionName">dbc_ad</param>
+           <param name="methode">list</param>
+         </result>
+      </action>
+  </package>
+</struts>

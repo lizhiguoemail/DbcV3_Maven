@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+	
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dbc_article" extends="backstage">
+	 	<action  name="dbc_article" class="com.dbc.action.Dbc_articleAction" method="execute">
+		        <result name="list">/pages/backstage/web/article/Listarticle.jsp</result>
+		        <result name="addorupdate">/pages/backstage/web/article/Addorupdatearticle.jsp</result>
+		        <result name="redirect-list" type="redirectAction">
+		          <param name="actionName">dbc_article</param>
+		          <param name="methode">list</param>
+		        </result>
+		         <!-- 使用此拦截器 -->  
+	            <interceptor-ref name="mydefault" />    
+		     </action>
+	</package>
+</struts>
+
